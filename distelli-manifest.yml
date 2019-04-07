@@ -16,6 +16,10 @@ opskernel/PFA_NodeJS_SampleApp:
   PostInstall:
     - echo "PostInstall Starting."
     # - npm install
+    
+  Env:
+    - PORT: "3000"
+    
   Exec:
     - echo "Exec Starting."
     - publicip=$(curl -s ident.me) || true
